@@ -8,9 +8,10 @@ var emojiDictionary = {
   "🤫": "Shushing Face"
 };
 
-var shoppinglist = ["milk", "bread", "butter"];
+var emojisweknow = Object.keys(emojiDictionary);
 export default function App() {
   const [userInputMeaning, setuserInputMeaning] = useState("");
+  //if emoji is searched in text area then it is taken from object array
   function inputEventHandler(event) {
     var userInput = event.target.value;
     var userInputMeaning = emojiDictionary[userInput];
@@ -19,21 +20,23 @@ export default function App() {
       userInputMeaning = "This is not defined here...Please try something else";
     }
   }
-  function getBg(index) {
-    if (index % 2 === 0) return "white";
-    else return "grey";
-  }
+
   return (
     <div className="App">
       <h1>Inside out!!</h1>
       <input onChange={inputEventHandler}></input>
-      <div class="output">{userInputMeaning}</div>
-      <ul>
-        {shoppinglist.map((item, index) => {
-          console.log(item);
-          return <li style={{ backgroundColor: getBg(index) }}>items</li>;
-        })}
-      </ul>
+      <h2>{userInputMeaning}</h2>
+      <h3>Emojis we know</h3>
+      {emojisweknow.map(function (emoji) {
+        return (
+          <span
+            style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
+            key={emoji}
+          >
+            {emoji}
+          </span>
+        );
+      })}
     </div>
   );
 }
