@@ -1,16 +1,14 @@
 import React from "react";
 import "./styles.css";
 
-var username = prompt("Enter your name here ");
-var color = "red";
+function btnClickHandler() {
+  console.log("clicked");
+}
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>
-        Welcome
-        <span style={{ color }}> {username}</span>
-      </h2>
+      <h1>Inside out!!</h1>
+      <button onClick={btnClickHandler}>Hit like!</button>
     </div>
   );
 }
