@@ -20,6 +20,11 @@ export default function App() {
       userInputMeaning = "This is not defined here...Please try something else";
     }
   }
+  function emojiClickHandler(emoji) {
+    //console.log(emoji);
+    var userInputMeaning = emojiDictionary[emoji];
+    setuserInputMeaning(userInputMeaning);
+  }
 
   return (
     <div className="App">
@@ -30,6 +35,7 @@ export default function App() {
       {emojisweknow.map(function (emoji) {
         return (
           <span
+            onClick={() => emojiClickHandler(emoji)}
             style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
             key={emoji}
           >
