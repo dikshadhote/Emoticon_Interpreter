@@ -1,8 +1,9 @@
 import React from "react";
 import "./styles.css";
-
+var count = 0;
 function btnClickHandler() {
-  console.log("clicked");
+  count++;
+  alert(count);
 }
 export default function App() {
   return (
