@@ -2,3 +2,11 @@
   font-family: sans-serif;
   text-align: center;
 }
+input {
+  height: 5vh;
+  width: 60%;
+  padding: 1rem;
+}
+.output {
+  padding: rem;
+}
