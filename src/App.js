@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-var username = "Diksha";
+var username = prompt("Enter your name here ");
 var color = "red";
 export default function App() {
   return (
