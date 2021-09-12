@@ -5,7 +5,12 @@ var emojiDictionary = {
   "🤣": " Rolling on the Floor Laughing",
   "🥰": "Smiling Face with Hearts",
   "😒 ": "Unamused Face",
-  "🤫": "Shushing Face"
+  "🤫": "Shushing Face",
+  "🤝":"Handshake",
+  "🤩":"Star-Struck",
+  "🤔":" Thinking Face",
+  "😏":"Smirking Face",
+  "🤗":"Hugging Face"
 };
 
 var emojisweknow = Object.keys(emojiDictionary);
